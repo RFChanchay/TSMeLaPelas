@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Bad Bunny</ion-title>
+    <ion-title>{{name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,11 +11,11 @@
   <ion-card>
     <img src="../../../assets/image/benito.jpg">
     <ion-card-header>
-      <ion-card-title>Bad Bunny</ion-card-title>
-      <ion-card-subtitle>16/11/22</ion-card-subtitle>
+      <ion-card-title>{{name}}</ion-card-title>
+      <ion-card-subtitle>{{date}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>Regresenme a ese dia</p>
+      <p>{{description}}</p>
     </ion-card-content>
   </ion-card>
 
@@ -24,27 +24,27 @@
     <ion-item>
       <ion-icon name="location-outline" slot="start"></ion-icon>
       <ion-label>Lugar:</ion-label>
-      <ion-text>Quito</ion-text>
+      <ion-text>{{place}}</ion-text>
     </ion-item>
     <ion-item>
       <ion-icon name="ticket-outline" slot="start"></ion-icon>
       <ion-label>Precio:</ion-label>
-      <ion-text>85</ion-text>
+      <ion-text>{{price}}</ion-text>
     </ion-item>
     <ion-item>
       <ion-icon name="calendar-outline" slot="start"></ion-icon>
       <ion-label>Fecha:</ion-label>
-      <ion-text>16/11/22</ion-text>
+      <ion-text>{{date}}</ion-text>
     </ion-item>
     <ion-item>
       <ion-icon name="alarm-outline" slot="start"></ion-icon>
       <ion-label>Duración:</ion-label>
-      <ion-text>2 horas</ion-text>
+      <ion-text>{{time}}</ion-text>
     </ion-item>
     <ion-item>
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>Artistas:</ion-label>
-      <ion-text>El conejo malo</ion-text>
+      <ion-text>{{artist}}</ion-text>
     </ion-item>
   </ion-list>
 
