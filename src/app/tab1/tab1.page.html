@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Eventos
     </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="ion-no-padding">
+    <ion-row justify-content-center align-items-center style="height: 100%">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <app-card-big nameEvent="Bad Bunny" dateEvent="Quito, 16 de Noviembre" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="benito.jpg"></app-card-big>
+      <app-card-big nameEvent="Duki" dateEvent="Guayaquil, 18 de Septiembre" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="duki.jpg"></app-card-big>
+      <app-card-big nameEvent="Mora" dateEvent="Quito, 16 de Febrero" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="mora.jpg"></app-card-big>
+      <app-card-big nameEvent="Romeo Santos" dateEvent="Quito, 25 de Febrero" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="romeo.jpg"></app-card-big>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
