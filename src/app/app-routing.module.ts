@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'eventinfo',
     loadChildren: () => import('./pages/eventinfo/eventinfo.module').then( m => m.EventinfoPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   }
 ];
 @NgModule({

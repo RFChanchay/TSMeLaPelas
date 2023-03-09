@@ -10,12 +10,15 @@
 <ion-content [fullscreen]="true">
   <ion-grid class="ion-no-padding">
     <ion-row justify-content-center align-items-center style="height: 100%">
-
       <app-card-big nameEvent="Bad Bunny" dateEvent="Quito, 16 de Noviembre" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="benito.jpg"></app-card-big>
       <app-card-big nameEvent="Duki" dateEvent="Guayaquil, 18 de Septiembre" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="duki.jpg"></app-card-big>
       <app-card-big nameEvent="Mora" dateEvent="Quito, 16 de Febrero" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="mora.jpg"></app-card-big>
       <app-card-big nameEvent="Romeo Santos" dateEvent="Quito, 25 de Febrero" descriptionEvent="Venta disponible desde el 16 de marzo del 2022" photoEvent="romeo.jpg"></app-card-big>
     </ion-row>
+    <ion-row  *ngFor="let evento of events; let indexEvento = index" justify-content-center align-items-center style="height: 100%">
+        <app-card-big nameEvent={{evento.name}} dateEvent={{evento.date}} descriptionEvent={{evento.description}} photoEvent={{evento.image}}></app-card-big>
+    </ion-row>
   </ion-grid>
 </ion-content>
+
 
