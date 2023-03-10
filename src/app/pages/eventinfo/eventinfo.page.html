@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-button (click)="logout()">
+				<ion-icon slot="icon-only" name="log-out"></ion-icon>
+			</ion-button>
+    </ion-buttons>
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="{{photoEvent}}">
+    <ion-card-header>
+      <ion-card-title>{{name}}</ion-card-title>
+      <ion-card-subtitle>{{date}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{description}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>Detalles del evento</ion-list-header>
+    <ion-item>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>Lugar:</ion-label>
+      <ion-text>{{place}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ticket-outline" slot="start"></ion-icon>
+      <ion-label>Precio ($):</ion-label>
+      <ion-text>{{price}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label>Fecha:</ion-label>
+      <ion-text>{{date}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="alarm-outline" slot="start"></ion-icon>
+      <ion-label>Duración:</ion-label>
+      <ion-text>{{time}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>Artistas:</ion-label>
+      <ion-text>{{artist}}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block">Comprar entradas</ion-button>
+</ion-content>
+

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center ion-margin-bottom">
+    <img src="../../../assets/image/logo.png" alt="Imagen de perfil" width="100">
+  </div>
+
+
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Contraseña" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-button expand="block" type="submit">Iniciar sesión</ion-button>
+    </div>
+  </form>
+
+  <div class="ion-text-center ion-margin-top">
+    <a routerLink="/register">¿No tienes una cuenta? Regístrate aquí</a>
+  </div>
+</ion-content>
+
+
+

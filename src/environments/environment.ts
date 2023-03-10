@@ -3,7 +3,25 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  firebase: {
+    projectId: 'login-eventos-286fd',
+    appId: '1:105754901879:web:7a612f42f96b6cd40cf572',
+    databaseURL: 'https://login-eventos-286fd-default-rtdb.firebaseio.com',
+    storageBucket: 'login-eventos-286fd.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyAhxNTlJYEjjmssWIgQpL3B1YPiN5e0pvY',
+    authDomain: 'login-eventos-286fd.firebaseapp.com',
+    messagingSenderId: '105754901879',
+  },
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyAhxNTlJYEjjmssWIgQpL3B1YPiN5e0pvY",
+    authDomain: "login-eventos-286fd.firebaseapp.com",
+    projectId: "login-eventos-286fd",
+    storageBucket: "login-eventos-286fd.appspot.com",
+    messagingSenderId: "105754901879",
+    appId: "1:105754901879:web:7a612f42f96b6cd40cf572"
+  }
 };
 
 /*

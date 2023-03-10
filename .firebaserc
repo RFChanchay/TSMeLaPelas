@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-eventos-286fd": {
+      "hosting": {
+        "app": [
+          "login-eventos-286fd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-eventos-286fd"
+  }
+}
