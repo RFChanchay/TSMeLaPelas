@@ -18,4 +18,5 @@ import { ToggleDarkComponent } from '../components/toggle-dark/toggle-dark.compo
   ],
   declarations: [Tab3Page,ToggleDarkComponent]
 })
+
 export class Tab3PageModule {}

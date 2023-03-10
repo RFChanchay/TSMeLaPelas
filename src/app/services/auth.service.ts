@@ -19,8 +19,6 @@ export class AuthService {
     }catch(e){
       return null;
     }
-    
-
   }
   async login ({email, password}: {email: string, password: string}){
     try{
@@ -36,5 +34,13 @@ export class AuthService {
   }
   logout(){
     return signOut(this.auth);
+  }
+  getCurrentUserEmail(): string | null {
+    const user = this.auth.currentUser;
+    if (user) {
+      return user.email;
+    } else {
+      return null;
+    }
   }
 }

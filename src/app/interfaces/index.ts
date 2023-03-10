@@ -13,7 +13,7 @@ export interface ShowEvent{
 }
 export interface BougthEvent{
     id:string,
-    name:string,
-    date:string,
-    mailUser:string
+    name:string|undefined,
+    date:string|undefined,
+    mailUser:string|null
 }

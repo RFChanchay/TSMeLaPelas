@@ -2,9 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
-      <ion-button (click)="logout()">
-				<ion-icon slot="icon-only" name="log-out"></ion-icon>
-			</ion-button>
+      
     </ion-buttons>
     <ion-title>{{name}}</ion-title>
   </ion-toolbar>
@@ -51,6 +49,6 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block">Comprar entradas</ion-button>
+  <ion-button expand="block" (click)="comprar()">Comprar entradas</ion-button>
 </ion-content>
 
