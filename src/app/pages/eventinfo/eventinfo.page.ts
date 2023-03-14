@@ -24,6 +24,8 @@ export class EventinfoPage implements OnInit {
   public events:ShowEvent []=[];
   public theConcert:any;
   bougthEvent:BougthEvent;
+  botonHabilitado = true;
+  bougthEvents:BougthEvent[]=[];
 
   constructor(
     private authService: AuthService,
@@ -59,9 +61,6 @@ export class EventinfoPage implements OnInit {
   }
   ngOnInit() {
     this.theConcert=this.activatedRoute.snapshot.queryParamMap.get('theEvent');
-    
-    //this.event = this.activatedRoute.snapshot.data['theEvent'];
-    //const jsonObject = JSON.parse(this.event);
     console.log(this.theConcert);
     this.eventServices.getEvents().subscribe(events=>{
       this.events=events;
@@ -80,14 +79,23 @@ export class EventinfoPage implements OnInit {
         this.bougthEvent.id=this.theConcert;
         this.bougthEvent.name=this.name;
         this.bougthEvent.date=this.date;
+        this.eventServices.getComprasByNameAndMail(this.name,this.authService.getCurrentUserEmail()).subscribe(bougthEvents=>{
+          this.bougthEvents=bougthEvents;
+          console.log(this.bougthEvents);
+          if(this.bougthEvents.length>0){
+            this.botonHabilitado=false;
+          }
+        })
         
-        // Aquí puedes hacer lo que necesites con el evento encontrado
-      } else {
+        } else {
         console.log('Evento no encontrado');
       }
     })
 
+
     this.bougthEvent.mailUser=this.authService.getCurrentUserEmail();
+    
+    
   }
 
 }

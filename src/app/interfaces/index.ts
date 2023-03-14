@@ -12,7 +12,7 @@ export interface ShowEvent{
     image?:string
 }
 export interface BougthEvent{
-    id:string,
+    id:string|null,
     name:string|undefined,
     date:string|undefined,
     mailUser:string|null

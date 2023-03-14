@@ -9,14 +9,14 @@ import { EventService } from '../services/event.service';
 })
 export class Tab1Page implements OnInit {
   public events:ShowEvent []=[];
+  public event:ShowEvent | undefined;
   
   
     
   ngOnInit(){
     this.eventServices.getEvents().subscribe(events=>{
-      this.events=events;
+      this.events=events; 
     })
-    
   }
 
   constructor(private eventServices: EventService) {}

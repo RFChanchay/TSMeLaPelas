@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BougthEvent } from '../interfaces';
+import { AuthService } from '../services/auth.service';
+import { EventService } from '../services/event.service';
+
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +10,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
-
+  bougthEvents:BougthEvent[]=[];
+  isModalOpen = false;
+  constructor(
+    private eventServices: EventService,
+    private authService:AuthService
+  ) {
+    
+  }
+  ngOnInit() {
+    this.eventServices.getComprasByMail(this.authService.getCurrentUserEmail()).subscribe(bougthEvents=>{
+      this.bougthEvents=bougthEvents;
+    })
+  }
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+  
 }

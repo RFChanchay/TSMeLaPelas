@@ -49,6 +49,6 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block" (click)="comprar()">Comprar entradas</ion-button>
+  <ion-button expand="block" [disabled]="!botonHabilitado" (click)="comprar()">Comprar entradas</ion-button>
 </ion-content>
 

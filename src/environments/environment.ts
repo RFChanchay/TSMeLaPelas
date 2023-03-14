@@ -17,6 +17,7 @@ export const environment = {
   firebaseConfig : {
     apiKey: "AIzaSyAhxNTlJYEjjmssWIgQpL3B1YPiN5e0pvY",
     authDomain: "login-eventos-286fd.firebaseapp.com",
+    databaseURL: "https://login-eventos-286fd-default-rtdb.firebaseio.com",
     projectId: "login-eventos-286fd",
     storageBucket: "login-eventos-286fd.appspot.com",
     messagingSenderId: "105754901879",
